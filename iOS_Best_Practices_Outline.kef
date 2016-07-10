@@ -299,7 +299,7 @@
 		* A target resides conceptually below the project level
 		* Use target settings to override the project buuild settings for individual targets
 		
-"---------------------------------- Deployment  ---------------------------------------"
+"---------------------------------- Deploy  ---------------------------------------"
 	- use code signing to assign specific profiles to builds that can then be distributed for specific purposes
 		* one profile for development
 		* one profile for QA
