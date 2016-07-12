@@ -29,24 +29,24 @@ https://developer.apple.com/ios/human-interface-guidelines/
 		* Swift Package Manager
 2. Authentication & Security: https://www.apple.com/business/docs/iOS_Security_Guide.pdf
 	* centralize your security, don’t apply it piecemeal
-	* Never use NSUserDefaults, other plist files on disk or Core Data for sensitive data
-	* Store sensitive information in Keychain
-	* Do not store sensitive data you don't actually need, or for longer than you need
-	* Only keep sensitive data around while you need it.
-	* Store application-specific authentication tokens rather than passwords
-	* Use HTTPS to verify the server you are contacting. Never accept an invalid or untrusted certificate
-	* Use the built-in APIs to store things. As Apple improves security, you get the benefits for free
-	* Set Data Protection to NSFileProtectionComplete wherever possible
+	* never use NSUserDefaults, other plist files on disk or Core Data for sensitive data
+	* store sensitive information in Keychain
+	* do not store sensitive data you don't actually need, or for longer than you need
+	* only keep sensitive data around while you need it.
+	* store application-specific authentication tokens rather than passwords
+	* use HTTPS to verify the server you are contacting. Never accept an invalid or untrusted certificate
+	* use the built-in APIs to store things. As Apple improves security, you get the benefits for free
+	* set Data Protection to NSFileProtectionComplete wherever possible
 3. Persistence Layer	
-	* Good post describing the apps file system: https://petermcintyre.com/topics/persisting-data-on-ios/
-	* The options for persisting data are
+	* here is a good post describing the apps file system: https://petermcintyre.com/topics/persisting-data-on-ios/
+	* the options for persisting data are
 		* SQLite - Able to access data with sql queries, can store large amount of data
 		* Core Data - grows and scales well with your app, often uses SQLite underneath, create a singleton manager class that handles setting up the Core Data stack
 		* plist file -  contain either an NSDictionary or an NSArray
 		* NSUserDefaults -  meant for nothing more than settings and preferences
 		* Keychain - store sensitive data here
 		* Custom Files - It is possible to store data into your own file type that gets saved in the apps file system
-	* As a general rule. Save any sensitive data such as passwords in the keychain. Save preferences or current app settings in NSUserDefaults. Save larger amounts of data in either SQLite or Core Data. PList files are useful for storing dictionaries of non sensitive data.
+	* as a general rule. Save any sensitive data such as passwords in the keychain. Save preferences or current app settings in NSUserDefaults. Save larger amounts of data in either SQLite or Core Data. PList files are useful for storing dictionaries of non sensitive data.
 4. Design Patterns
 	* MVC: Model-View-Controller
 	* MVCS: Model-View-Controller-Store
