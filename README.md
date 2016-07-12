@@ -26,6 +26,7 @@ https://developer.apple.com/ios/human-interface-guidelines/
 	* Use Dependency Managers when possible
 		* CocoaPods
 		* Carthage
+		* Swift Package Manager
 2. Authentication & Security: https://www.apple.com/business/docs/iOS_Security_Guide.pdf
 	* centralize your security, don’t apply it piecemeal
 	* Never use NSUserDefaults, other plist files on disk or Core Data for sensitive data
