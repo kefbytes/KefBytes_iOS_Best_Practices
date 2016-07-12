@@ -1,5 +1,5 @@
 # iOS Best Practices
-Some best practices for iOS
+### Some best practices for iOS
 
 *"Focus on providing the best user experience at all phases of application development."*
 	
