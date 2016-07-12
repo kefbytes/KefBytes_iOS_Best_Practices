@@ -22,8 +22,8 @@ https://developer.apple.com/ios/human-interface-guidelines/
 			* Image Downloading and Caching
 				* SDWebImage
 				* KingFisher
-	* Reusable modules
-	* Dependency Managers
+	* Make use of reusable modules
+	* Use Dependency Managers when possible
 		* CocoaPods
 		* Carthage
 2. Authentication & Security: https://www.apple.com/business/docs/iOS_Security_Guide.pdf
