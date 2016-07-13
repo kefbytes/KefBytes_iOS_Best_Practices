@@ -68,7 +68,7 @@ https://developer.apple.com/ios/human-interface-guidelines/
 	* Branching Strategy
 		*  A good branching strategy makes the developers job easier and protects against unnessary code breaks
 		*  A universally recognized branching strategy makes it easy for developers to know expectations
-		*  GitFlow is a common strategy that is widely used and has stood up well over the course of time
+		*  GitFlow is a common strategy that is widely used and has stood up well over the course of time.
 		Here are the basic ideas of GitFlow:
 			* There are two infinite branches (these names are common but not mandatory)
 				* master
