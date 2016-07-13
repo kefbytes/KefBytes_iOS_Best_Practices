@@ -28,41 +28,41 @@ https://developer.apple.com/ios/human-interface-guidelines/
 		* Carthage
 		* Swift Package Manager
 2. Authentication & Security: https://www.apple.com/business/docs/iOS_Security_Guide.pdf
-	* centralize your security, don’t apply it piecemeal
-	* never use NSUserDefaults, other plist files on disk or Core Data for sensitive data
-	* store sensitive information in Keychain
-	* do not store sensitive data you don't actually need, or for longer than you need
-	* only keep sensitive data around while you need it.
-	* store application-specific authentication tokens rather than passwords
-	* use HTTPS to verify the server you are contacting. Never accept an invalid or untrusted certificate
-	* use the built-in APIs to store things. As Apple improves security, you get the benefits for free
-	* set Data Protection to NSFileProtectionComplete wherever possible
+	* Centralize your security, don’t apply it piecemeal
+	* Never use NSUserDefaults, other plist files on disk or Core Data for sensitive data
+	* Store sensitive information in Keychain
+	* Do not store sensitive data you don't actually need, or for longer than you need
+	* Only keep sensitive data around while you need it.
+	* Store application-specific authentication tokens rather than passwords
+	* Use HTTPS to verify the server you are contacting. Never accept an invalid or untrusted certificate
+	* Use the built-in APIs to store things. As Apple improves security, you get the benefits for free
+	* Set Data Protection to NSFileProtectionComplete wherever possible
 3. Persistence Layer	
-	* here is a good post describing the apps file system: https://petermcintyre.com/topics/persisting-data-on-ios/
-	* the options for persisting data are
+	* Here is a good post describing the apps file system: https://petermcintyre.com/topics/persisting-data-on-ios/
+	* The options for persisting data are
 		* SQLite - Able to access data with sql queries, can store large amount of data
 		* Core Data - grows and scales well with your app, often uses SQLite underneath, create a singleton manager class that handles setting up the Core Data stack
 		* plist file -  contain either an NSDictionary or an NSArray
 		* NSUserDefaults -  meant for nothing more than settings and preferences
 		* Keychain - store sensitive data here
 		* Custom Files - It is possible to store data into your own file type that gets saved in the apps file system
-	* as a general rule. Save any sensitive data such as passwords in the keychain. Save preferences or current app settings in NSUserDefaults. Save larger amounts of data in either SQLite or Core Data. PList files are useful for storing dictionaries of non sensitive data.
+	* As a general rule. Save any sensitive data such as passwords in the keychain. Save preferences or current app settings in NSUserDefaults. Save larger amounts of data in either SQLite or Core Data. PList files are useful for storing dictionaries of non sensitive data.
 4. Design Patterns
 	* MVC: Model-View-Controller
 	* MVCS: Model-View-Controller-Store
 	* MVVM: Model-View-ViewModel
 	* The age old pattern that everyone learns first is MVC. But in iOS this pattern often leads to bloated ViewControllers. As a result often we will use a ViewModel. Using this pattern we are able to strip everything except the basic view components out of the view and put them in the ViewModel. It is also common to see a Store implemented. The role of the store is to handle all data requests. In the MVC and MVVM patterns the functionality of the store is usually built into the model.
 5. Unit Testing
-	* unit tests should not be written to test for bugs
-	* unit tests are most effective when using TDD (Test Driven Development)
-	* unit tests should be used for designing individual robust software components
-	* unit tests should be effective regardless of the data, meaning they are data independent
-	* unit tests work on small individual pieces of code, changes to other pieces of the code should not break them
-	* unit tests should not rely on other unit tests
-	* unit tests should be stateless
-	* mock out data needed for any unit tests
-	* don't rely too much on common setup code for individual unit tests
-	* name your unit tests clearly
+	* Unit tests should not be written to test for bugs
+	* Unit tests are most effective when using TDD (Test Driven Development)
+	* Unit tests should be used for designing individual robust software components
+	* Unit tests should be effective regardless of the data, meaning they are data independent
+	* Unit tests work on small individual pieces of code, changes to other pieces of the code should not break them
+	* Unit tests should not rely on other unit tests
+	* Unit tests should be stateless
+	* Mock out data needed for any unit tests
+	* Don't rely too much on common setup code for individual unit tests
+	* Name your unit tests clearly
 6. Code Repository
 	* Use git for your code repository
 	* Branching Strategy
