@@ -150,6 +150,7 @@ https://developer.apple.com/ios/human-interface-guidelines/
 		*  Track Signups
 		*  Track App Views
 21. Block is a part of Objective-C syntax, which allows to pass a function to another function as a direct argument.
+22. Always provide error handling code to allow for graceful handling of errors
 
 ## XCode
 * The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. 
@@ -161,7 +162,6 @@ https://developer.apple.com/ios/human-interface-guidelines/
 	* https://spin.atomicobject.com/2014/03/23/xcode-keyboard-shortcuts/
 	* https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/xcode_help-command_shortcuts/MenuCommands/MenuCommands014.html
 	* http://five.agency/xcode-keyboard-shortcuts-which-will-boost-your-productivity/
-* Always provide error handling code to allow for graceful handling of errors
 
 ## UI
 1. style Guides 
