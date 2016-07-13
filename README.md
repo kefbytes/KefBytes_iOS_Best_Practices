@@ -164,31 +164,31 @@ https://developer.apple.com/ios/human-interface-guidelines/
 	* http://five.agency/xcode-keyboard-shortcuts-which-will-boost-your-productivity/
 
 ## UI
-1. style Guides 
+1. Make use of style Guides 
 	* A style guide listing standards for UI elements go a long way
 	* Items to include in the style guide include but are not limited to
 		* Colors
 		* Fonts
 		* Button sizes and shapes
 		* Resuable assets
-2. standardized Colors
-	* Use a UIColor Category to define all your colors and import the category in the prefix.pch file for your project
+2. Standardize Colors
+	* Use a UIColor Category to define all your colors and import the category in the prefix.pch file of your project
 	* Don't use Macro's. Example #define Color...
-3. designing for different devices and screen sizes
+3. Designing for different devices and screen sizes
 	* Use adaptive layout, size classes and auto layout to design for different devices and screen sizes
-4. storyboards, nibs or code 
-	* The use of storyboards vs nibs vs coce is a hotly debated topic. We live in a world where apps are often maintained by developers coming and going over the lifetime of the app. Enhancements need to be implemented in a timely manner. New developers come on board and need to get up to speed as quickly as possible. With these things in mind follow this very general guideline.
+4. Storyboards, nibs or code 
+	* The use of storyboards vs nibs vs code is a hotly debated topic. We live in a world where apps are often maintained by developers coming and going over the lifetime of the app. Enhancements need to be implemented in a timely manner. New developers come on board and need to get up to speed as quickly as possible. With these things in mind follow this very general guideline.
 		* Use storyboards whenever possible
-		* When you come across a view that just can't be laid out right in a storyboard use a nibs
+		* When you come across a view that just can't be laid out right in a storyboard use a nib
 		* When a view is so complicated that neither a storyboard or nib will work lay it out in code
 	* Use multiple storyboards so individual ones don't get too large
-	* for repeatable views used over and over again nibs are a good optional
-	* code allows the most flexibility but can take longer to layout and maintain
+	* For repeatable views used over and over again nibs are a good optional
+	* Code allows the most flexibility but can take longer to layout and maintain
 5. UIStackView
 	* Since UIStackViews were introduced Apple seems to be encouraging the use of them more and more
 
 ## Code
-1. constants
+1. Constants
 	* Constants are preferred over in-line string literals or numbers
 	* Swift - use a struct file
 	* ObjC - Constants.h file (include in prefix header)
@@ -196,8 +196,8 @@ https://developer.apple.com/ios/human-interface-guidelines/
 		*"Instead of preprocessor macro definitions (via #define), use actual constants"*
 	* Constants should be declared as static constants and not #defines unless explicitly being used as a macro
 		* consts are much more compiler and debugger friendly than #defines
-2. enums
-	* enums can make your code more readable by substituting strings for Int values
+2. Enums
+	* Enums can make your code more readable by substituting strings for Int values
 	* When using enums, it is recommended to use the new fixed underlying type specification because it has stronger type checking and code completion.
 	* typedef NS_ENUM GlobalConstants not enum GlobalConstants
 	* Swift enums are much more powerful than their ObjC counterparts
@@ -210,7 +210,7 @@ https://developer.apple.com/ios/human-interface-guidelines/
 	* Passing data around by creating instances of the AppDelegate in ViewController is not good practice
 5. Coding Standards & Style Guide (syntax consistency)
 	* There are more than a few coding styles and opinions on such, the important thing is to agree on a coding style and be consistent with it across the team
-	* Here are a couple popular and widely used coding styles
+	* Here are a couple of the more popular and widely used coding styles
 		* NY Times Coding Standards - https://github.com/NYTimes/objective-c-style-guide
 		* Ray Wenderlich: Swift and Objective-C - https://github.com/raywenderlich/objective-c-style-guide
 	* Use consistent spacing, indents etc...
@@ -259,34 +259,34 @@ https://developer.apple.com/ios/human-interface-guidelines/
 11. Refactor constantly
 
 ## Build
-1. define the minimum version supported
-2. use continuous integration
-	1. code is checked in
-	2. jenkins kicks in
+1. Define the minimum version supported
+2. Use continuous integration
+	1. Code is checked in
+	2. Jenkins kicks in
 		* tests run
 			* automated tests
 			* unit tests
 		* automated build
 		* build automatically uploaded to continuos delivery service such as Crashlytics
-	3. build availble to QA
+	3. Build available to QA
 		*  the app is thus maintained in a deployable state where a build always exists that’s been tested and is ready to deploy
-3. debug vs release builds
-	* you can add more build configurations on the "Info" tab of your project settings in Xcode.
-	* use configuration settings files (“.xcconfig files”)  to set build settings
+3. Debug vs release builds
+	* You can add more build configurations on the "Info" tab of your project settings in Xcode.
+	* Use configuration settings files (“.xcconfig files”)  to set build settings
 		* you can add comments to explain things
 		* you can use #include to include other build settings files avoiding duplication
-	* turn off code optimizations for Debug builds
-	* enable code optimization for Release builds
+	* Turn off code optimizations for Debug builds
+	* Enable code optimization for Release builds
 		* there is a lot more optimization going on at compile time, at the expense of debugging possibilities
-4. build configurations are used to specify builds that are signed for specific profiles
-5. targets
-	* a target resides conceptually below the project level
-	* use target settings to override the project buuild settings for individual targets
+4. Build configurations are used to specify builds that are signed for specific profiles
+5. Targets
+	* A target resides conceptually below the project level
+	* Use target settings to override the project buuild settings for individual targets
 
 ## Deploy
-1. use code signing to assign specific profiles to builds that can then be distributed for specific purposes
-	* profiles are maintained on Apple’s developer portal and given an app ID
+1. Use code signing to assign specific profiles to builds that can then be distributed for specific purposes
+	* Profiles are maintained on Apple’s developer portal and given an app ID
 		* one profile for development
 		* one profile for QA
 		* one profile for app store release
-2. during continuos integration push builds to a delivery service such as Crashlytics for deployment
+2. During continuos integration push builds to a delivery service such as Crashlytics for deployment
