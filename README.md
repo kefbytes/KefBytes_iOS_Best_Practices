@@ -60,7 +60,7 @@ https://developer.apple.com/ios/human-interface-guidelines/
 	* unit tests work on small individual pieces of code, changes to other pieces of the code should not break them
 	* unit tests should not rely on other unit tests
 	* unit tests should be stateless
-	* mock out data needed for any unti tests
+	* mock out data needed for any unit tests
 	* don't rely too much on common setup code for individual unit tests
 	* name your unit tests clearly
 6. Code Repository
