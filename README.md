@@ -51,7 +51,7 @@ https://developer.apple.com/ios/human-interface-guidelines/
 	* MVC: Model-View-Controller
 	* MVCS: Model-View-Controller-Store
 	* MVVM: Model-View-ViewModel
-	* The age old pattern that everyone learns first is MVC. But in iOS this pattern often leads to bloated ViewControllers. As a result much often we will use a ViewModel. using this pattern we are able to strip everything except the basic view components out of the view and put them in the ViewModel. It is also common to see a Store implemented. The role of the store is to //handle all data requests. In the MVC and MVVM patterns the functionality of the store is usually built into the model.
+	* The age old pattern that everyone learns first is MVC. But in iOS this pattern often leads to bloated ViewControllers. As a result often we will use a ViewModel. Using this pattern we are able to strip everything except the basic view components out of the view and put them in the ViewModel. It is also common to see a Store implemented. The role of the store is to handle all data requests. In the MVC and MVVM patterns the functionality of the store is usually built into the model.
 5. Unit Testing
 	* unit tests should not be written to test for bugs
 	* unit tests are most effective when using TDD (Test Driven Development)
