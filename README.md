@@ -319,6 +319,11 @@ https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGui
 * Use NSZombieEnabled to find object leaks
 
 ### Refactor constantly
+* Code gets messy over time especially with many developers and over the course of a long life cycle for the app. Build in time to refactor on a regular basis.
+
+### Access Control
+* Start with the strictest of access controls and move to less strict as needed
+	* Example: create functions as private  and only modify to less restrictive when you find that they need to be
 
 ## Build
 ### Define the minimum version supported
