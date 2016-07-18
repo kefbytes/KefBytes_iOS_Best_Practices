@@ -325,6 +325,9 @@ https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CodingGui
 * Start with the strictest of access controls and move to less strict as needed
 	* Example: create functions as private  and only modify to less restrictive when you find that they need to be
 
+### Working with Currency
+* It's always best to use NSDecimalNumber with currency values so you don't lose precision during calculations.
+
 ## Build
 ### Define the minimum version supported
 
