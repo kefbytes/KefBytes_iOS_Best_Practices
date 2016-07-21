@@ -196,6 +196,23 @@ https://www.apple.com/business/docs/iOS_Security_Guide.pdf
 
 * Always provide error handling code to allow for graceful handling of errors
 
+### Accessibility
+
+* Design
+	* Wireframes should include overlays of each VO frame along with swiping order and any special considerations.
+	* Each story/requirement should include a section on accesibility that lists:
+		* VO Text - define copy for each accessibilityLabel
+		* Traits - defined for each accessibilityTrait
+		* Additional Context(if needed) - for use with accesibilityHint
+		* Value/State (if applicable)
+* Implementation
+	* If the content on the screen is static, use Interface Builder to configure accessibility options.
+	* If the content on the page is dynamic, use code to configure accessibility options.
+	* Attributed Strings do not always play nice with the VO screen reader. Extension(Swift) can help with formatting the text.
+	* Every page must have a heading.
+	* If you need to concatenate multiple elements into one VO swipe, disable accessibility on the sub-elements and enable accessibility on the “parent” element only.
+	* If you have a complex, custom control, implement accessibilityActivate informal protocol.
+
 ## XCode
 * The physical files should be kept in sync with the Xcode project files in order to avoid file sprawl. 
 * Any Xcode groups created should be reflected by folders in the filesystem. 
