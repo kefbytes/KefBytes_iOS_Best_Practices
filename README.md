@@ -174,7 +174,7 @@ https://www.apple.com/business/docs/iOS_Security_Guide.pdf
 * Use hashtags and log levels to make your log messages easier to search and filter.
 * Categorize the event. For example, use the severity values INFO, WARN, ERROR, and DEBUG.
 * If you log to a local file, it provides a local buffer and you aren't blocked if the network goes down.
-* Come up with a rotation strategy for your logs so they don't get overwhelming and take up too much space
+* Come up with a rotation strategy for your logs so they don't get overwhelming and take up too much space.
 
 ### Profiling:
 
@@ -182,6 +182,7 @@ https://www.apple.com/business/docs/iOS_Security_Guide.pdf
 
 ### Analytics:
 
+* Have a baseline that can be compared to, so you know if changes are working.
 * Business generally dictates what to track, but here are some common elements which get tracked
 	*  Track App Opens
 	*  Track Logins
